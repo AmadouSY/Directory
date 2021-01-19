@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS CONTACT;
+
+CREATE TABLE CONTACT (
+  id VARCHAR(250) PRIMARY KEY NOT NULL ,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) NOT NULL,
+  company VARCHAR(250) NOT NULL,
+  department VARCHAR(250) NOT NULL
+) as select * from CSVREAD('classpath:/mock_data.csv');
